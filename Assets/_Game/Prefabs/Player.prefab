@@ -131,7 +131,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FirstPersonController
   walkSpeed: 4
   gravity: -9.81
-  playerCamera: {fileID: 7209055128388387911}
+  walkBobSpeed: 14
+  walkBobAmountX: 0.05
+  walkBobAmountY: 0.05
+  walkBobSwayAngle: 3
+  idleBobSpeed: 2
+  idleBobAmount: 0.03
+  playerCamera: {fileID: 0}
   mouseSensitivity: 150
 --- !u!1 &6980237885812294612
 GameObject:
