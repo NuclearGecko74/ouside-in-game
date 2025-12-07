@@ -2016,18 +2016,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbfd8a974d68ee14e8acf7bdcf440bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirstPersonController
-  walkSpeed: 5
-  runSpeed: 8
-  crouchSpeed: 2.5
-  gravity: -9.99
-  jumpHeight: 1.5
-  crouchHeight: 0.3
-  standHeight: 1
-  timeToCrouch: 0.25
-  crouchKey: 306
+  walkSpeed: 4
+  gravity: -9.81
   playerCamera: {fileID: 310784799}
-  mouseSensitivity: 2
-  lookXLimit: 85
+  mouseSensitivity: 150
 --- !u!143 &743018930
 CharacterController:
   m_ObjectHideFlags: 0
