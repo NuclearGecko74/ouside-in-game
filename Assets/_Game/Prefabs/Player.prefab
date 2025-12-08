@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4004693756028055099}
   - component: {fileID: 5514372037610459111}
   - component: {fileID: 8545718844742853085}
+  - component: {fileID: 624882354612540817}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -139,6 +140,20 @@ MonoBehaviour:
   idleBobAmount: 0.03
   playerCamera: {fileID: 0}
   mouseSensitivity: 150
+--- !u!114 &624882354612540817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6834368296983818983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 029c25e7207f10d4bb875ce1558b7bbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactor
+  InteractorSource: {fileID: 8848962231149858382}
+  InteractRange: 4
 --- !u!1 &6980237885812294612
 GameObject:
   m_ObjectHideFlags: 0
