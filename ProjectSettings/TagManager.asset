@@ -6,6 +6,7 @@ TagManager:
   tags:
   - InteractionText
   - Crosshair
+  - BlackScreen
   layers:
   - Default
   - TransparentFX

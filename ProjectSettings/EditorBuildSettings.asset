@@ -4,6 +4,18 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Game/Scenes/Levels/1_Graveyard.unity
+    guid: 0ab40b7929330304c82bb632331e0bbd
+  - enabled: 1
+    path: Assets/_Game/Scenes/Levels/2_Hallway.unity
+    guid: 37633ca11d20d1a4c9cb272fb1488ba2
+  - enabled: 1
+    path: Assets/_Game/Scenes/Levels/3_CrossRoads.unity
+    guid: bc4a41914424b3c4ba247ef7f72d1c5d
+  - enabled: 1
+    path: Assets/_Game/Scenes/Levels/4_Forest.unity
+    guid: be3698b05cadbad499572958324deea0
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
