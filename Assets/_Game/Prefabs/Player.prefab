@@ -154,6 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interactor
   InteractorSource: {fileID: 8848962231149858382}
   InteractRange: 4
+  defaultIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  interactIcon: {fileID: 21300000, guid: 8de2f35b6fa454a48adf23e8a819456f, type: 3}
 --- !u!1 &6980237885812294612
 GameObject:
   m_ObjectHideFlags: 0

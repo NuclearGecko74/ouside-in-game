@@ -1960,6 +1960,7 @@ GameObject:
   - component: {fileID: 764976377}
   - component: {fileID: 764976376}
   - component: {fileID: 764976375}
+  - component: {fileID: 764976378}
   m_Layer: 0
   m_Name: "L\xE1pida"
   m_TagString: Untagged
@@ -2059,6 +2060,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764976373}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &764976378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764976373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75383f495a4634e469e1973953a03b94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Test
+  promptMessage: Interactuar
 --- !u!1 &779720461
 GameObject:
   m_ObjectHideFlags: 0

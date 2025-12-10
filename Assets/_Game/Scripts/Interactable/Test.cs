@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class Test : MonoBehaviour, IInteractable
+public class Test : InteractableObject
 {
-    public void Interact()
+    public override void Interact()
     {
         Debug.Log("WAZAAAAA");
     }
