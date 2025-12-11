@@ -40,8 +40,6 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
-        defaultFOV = playerCamera.fieldOfView;
-
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
 
@@ -49,6 +47,7 @@ public class FirstPersonController : MonoBehaviour
         {
             defaultPosY = playerCamera.transform.localPosition.y;
             defaultPosX = playerCamera.transform.localPosition.x;
+            defaultFOV = playerCamera.fieldOfView;
         }
     }
 
@@ -80,14 +79,15 @@ public class FirstPersonController : MonoBehaviour
 
     void HandleMouseLook()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float sensitivityMultiplier = isZooming ? zoomSensitivityMultiplier : 1f;
+
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * sensitivityMultiplier * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * sensitivityMultiplier * Time.deltaTime;
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         playerCamera.transform.localRotation = Quaternion.Euler(xRotation, 0f, currentTilt);
-
         transform.Rotate(Vector3.up * mouseX);
     }
 
