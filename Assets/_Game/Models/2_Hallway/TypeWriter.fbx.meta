@@ -3,7 +3,27 @@ guid: b83e534c337d92244b5b471b33fb3aef
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal_01_Grey_1
+    second: {fileID: 2800000, guid: 63b53708761594d4598cf165a07fbb67, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Paper_Page_01_Blank
+    second: {fileID: 2800000, guid: fe506c8660fac304c9425cdfad0e186d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood_Pattern_02_Brown_1
+    second: {fileID: 2800000, guid: 0a502bed1653e8040ac0c85b2acfd4d8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood_Pattern_02_Yellow_1
+    second: {fileID: 2800000, guid: f05c84e08709486438037c3e55a372c5, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

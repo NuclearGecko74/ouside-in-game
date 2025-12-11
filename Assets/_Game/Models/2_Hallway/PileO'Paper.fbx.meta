@@ -3,7 +3,12 @@ guid: 7dc51501da575ef46a0341d2db08f686
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Paper_Page_01_Fold
+    second: {fileID: 2800000, guid: b57902aeebc5c6b4486abcb7bf8fd57c, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

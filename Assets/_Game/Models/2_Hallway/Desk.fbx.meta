@@ -3,7 +3,12 @@ guid: ea92c8d5e4c38764cae073a3cd87eb8b
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood_Pattern_02_Brown_1
+    second: {fileID: 2800000, guid: 128e74e4e4cb9d44fbe1f4a7839345f7, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
