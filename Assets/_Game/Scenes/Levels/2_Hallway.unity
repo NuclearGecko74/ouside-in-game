@@ -6048,13 +6048,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1747593996}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.050233018, z: -0, w: 0.9987375}
-  m_LocalPosition: {x: 31.098, y: 1.8101412, z: 8.970239}
+  m_LocalRotation: {x: -0, y: 0.05914178, z: -0, w: 0.9982496}
+  m_LocalPosition: {x: 31.04, y: 1.8101412, z: 8.9}
   m_LocalScale: {x: 0.6162749, y: 0.0244845, z: 0.81615}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -5.759, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 6.781, z: 0}
 --- !u!114 &1747594001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6068,7 +6068,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SecretItem
   promptMessage: 
-  destroyOnInteract: 1
+  uniqueID: 
+  destroyOnInteract: 0
+  noteContent: "\xBFRecuerdas cuando tapaste las ventanas porque sent\xEDas que algo
+    te observaba? Los ojos que te segu\xEDan a todas partes, que nunca ve\xEDas,
+    pero que siempre estaban ah\xED."
   pickupEffect: {fileID: 0}
   pickupSound: {fileID: 8300000, guid: ef4bdbfd4d1b7ea498e7d56b71d1c033, type: 3}
 --- !u!1 &1792499987
@@ -6526,6 +6530,7 @@ GameObject:
   - component: {fileID: 1934079752}
   - component: {fileID: 1934079751}
   - component: {fileID: 1934079750}
+  - component: {fileID: 1934079753}
   m_Layer: 0
   m_Name: Spot Light (1)
   m_TagString: Untagged
@@ -6642,6 +6647,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1160881572}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1934079753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934079749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 566b28b7c5e221e44993bc9554615862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlickeringLight
+  minWaitTime: 0.1
+  maxWaitTime: 0.5
 --- !u!1001 &1987576084
 PrefabInstance:
   m_ObjectHideFlags: 0

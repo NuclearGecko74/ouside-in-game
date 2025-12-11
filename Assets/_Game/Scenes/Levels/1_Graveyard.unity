@@ -158,7 +158,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SecretItem
   promptMessage: 
+  uniqueID: 
   destroyOnInteract: 1
+  noteContent: "Un peluche que te acompa\xF1\xF3 durante gran parte de tu vida\u2026\nDime,
+    \xBFrecuerdas qui\xE9n eres, Henry Patrick?"
   pickupEffect: {fileID: 0}
   pickupSound: {fileID: 8300000, guid: ef4bdbfd4d1b7ea498e7d56b71d1c033, type: 3}
 --- !u!1 &1765509
@@ -11668,6 +11671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GlobalGameManager
   totalItemsToWin: 4
   winSceneName: 5_End
+  collectedObjectIDs: []
 --- !u!4 &1836672246
 Transform:
   m_ObjectHideFlags: 0

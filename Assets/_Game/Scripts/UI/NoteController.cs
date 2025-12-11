@@ -34,6 +34,7 @@ public class NoteController : MonoBehaviour
 
     public void ShowNote(string textContent)
     {
+
         isReading = true;
 
         noteText.text = textContent;
