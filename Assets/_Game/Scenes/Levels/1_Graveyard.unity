@@ -124,19 +124,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e2e81cadcd017304c89af845761f5d28, type: 3}
   m_PrefabInstance: {fileID: 1443933756}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &899294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 899292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95366a4cd54af4846913aa24235dc13a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LevelExit
-  nextSceneName: 2_Hallway
 --- !u!65 &899295
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -158,6 +145,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.38685384, y: 0.5170535, z: 0.3599497}
   m_Center: {x: -0.014428065, y: 0.24147116, z: 0.0047901575}
+--- !u!114 &899296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b1cd01cf7051a24cbfc1fde68c213b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SecretItem
+  promptMessage: 
+  destroyOnInteract: 1
+  pickupEffect: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: ef4bdbfd4d1b7ea498e7d56b71d1c033, type: 3}
 --- !u!1 &1765509
 GameObject:
   m_ObjectHideFlags: 0
@@ -6196,6 +6199,7 @@ GameObject:
   - component: {fileID: 1027563347}
   - component: {fileID: 1027563346}
   - component: {fileID: 1027563345}
+  - component: {fileID: 1027563348}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -6295,6 +6299,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027563343}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1027563348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027563343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 224c4d26bf61f884390f440cab049ccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinalObjective
+  promptMessage: Interact
+  winSceneName: 2_Hallway
+  isLocked: 1
+  lockedMessage: Interact
+  unlockedPrompt: 
+  lockedSound: {fileID: 0}
+  successSound: {fileID: 0}
 --- !u!4 &1051098704 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6928951510185075153, guid: c43dbb3d186076446a00a4590f5f82da, type: 3}
@@ -8970,10 +8993,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e2e81cadcd017304c89af845761f5d28, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 899294}
+      addedObject: {fileID: 899295}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e2e81cadcd017304c89af845761f5d28, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 899295}
+      addedObject: {fileID: 899296}
   m_SourcePrefab: {fileID: 100100000, guid: e2e81cadcd017304c89af845761f5d28, type: 3}
 --- !u!1001 &1448555777
 PrefabInstance:
@@ -10439,8 +10462,56 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 785b9a3f75e6ba14eac45b45f057eefd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1709627418}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 785b9a3f75e6ba14eac45b45f057eefd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1709627417}
   m_SourcePrefab: {fileID: 100100000, guid: 785b9a3f75e6ba14eac45b45f057eefd, type: 3}
+--- !u!1 &1709627416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 785b9a3f75e6ba14eac45b45f057eefd, type: 3}
+  m_PrefabInstance: {fileID: 1709627415}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1709627417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709627416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 055a488f7b744534da74b0a9866d1293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnlockKey
+  promptMessage: Interact
+  levelDoor: {fileID: 0}
+  finalDoor: {fileID: 1027563348}
+  keySound: {fileID: 0}
+--- !u!65 &1709627418
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709627416}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.010842392, y: 0.0017663784, z: 0.040201984}
+  m_Center: {x: -0.00035356678, y: -0.00005102012, z: 0.019872155}
 --- !u!1 &1712591500
 GameObject:
   m_ObjectHideFlags: 0
@@ -11566,6 +11637,52 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &1836672244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1836672246}
+  - component: {fileID: 1836672245}
+  m_Layer: 0
+  m_Name: GlobalManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1836672245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836672244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb1c4a95887e2ca4ba8bc34763201635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GlobalGameManager
+  totalItemsToWin: 4
+  winSceneName: 5_End
+--- !u!4 &1836672246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836672244}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.06355, y: 3.59638, z: 7.8494}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1850492350 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4597902276463140916, guid: 70b302541c51a5646aa9a672bb14512d, type: 3}
@@ -13931,3 +14048,4 @@ SceneRoots:
   - {fileID: 762257527}
   - {fileID: 2020456710}
   - {fileID: 1709627415}
+  - {fileID: 1836672246}

@@ -671,8 +671,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac6658dab65be104ba040861c789fcc7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1906170511}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ac6658dab65be104ba040861c789fcc7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 807132216}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ac6658dab65be104ba040861c789fcc7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 807132217}
   m_SourcePrefab: {fileID: 100100000, guid: ac6658dab65be104ba040861c789fcc7, type: 3}
+--- !u!1 &133731889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ac6658dab65be104ba040861c789fcc7, type: 3}
+  m_PrefabInstance: {fileID: 133731888}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &163950061
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,6 +1282,7 @@ GameObject:
   - component: {fileID: 412220278}
   - component: {fileID: 412220283}
   - component: {fileID: 412220282}
+  - component: {fileID: 412220284}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -1466,6 +1478,25 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &412220284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412220277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 224c4d26bf61f884390f440cab049ccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinalObjective
+  promptMessage: Interact
+  winSceneName: 4_Forest
+  isLocked: 1
+  lockedMessage: Find the key
+  unlockedPrompt: 
+  lockedSound: {fileID: 0}
+  successSound: {fileID: 0}
 --- !u!1 &413543634
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,8 +2065,56 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 05bd65685650cb941b1340ae41ee9b10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 638018861}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 05bd65685650cb941b1340ae41ee9b10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 638018862}
   m_SourcePrefab: {fileID: 100100000, guid: 05bd65685650cb941b1340ae41ee9b10, type: 3}
+--- !u!1 &638018860 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 05bd65685650cb941b1340ae41ee9b10, type: 3}
+  m_PrefabInstance: {fileID: 638018859}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &638018861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638018860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 055a488f7b744534da74b0a9866d1293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnlockKey
+  promptMessage: Interact
+  levelDoor: {fileID: 0}
+  finalDoor: {fileID: 412220284}
+  keySound: {fileID: 0}
+--- !u!65 &638018862
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638018860}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0004000013, y: 0.0015186493, z: 0.0071006753}
+  m_Center: {x: 9.752305e-13, y: -0.00028636283, z: 0.000050337647}
 --- !u!1001 &639162632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2872,6 +2951,43 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac6658dab65be104ba040861c789fcc7, type: 3}
   m_PrefabInstance: {fileID: 133731888}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &807132216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133731889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b1cd01cf7051a24cbfc1fde68c213b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SecretItem
+  promptMessage: Interact
+  destroyOnInteract: 0
+  pickupEffect: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: ef4bdbfd4d1b7ea498e7d56b71d1c033, type: 3}
+--- !u!65 &807132217
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133731889}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4, y: 4, z: 7}
+  m_Center: {x: 0, y: 3, z: 0}
 --- !u!1 &807320096
 GameObject:
   m_ObjectHideFlags: 0
