@@ -316,6 +316,9 @@ MonoBehaviour:
   idleBobAmount: 0.03
   playerCamera: {fileID: 0}
   mouseSensitivity: 150
+  zoomFOV: 20
+  zoomSmooth: 5
+  zoomSensitivityMultiplier: 0.4
 --- !u!114 &624882354612540817
 MonoBehaviour:
   m_ObjectHideFlags: 0
