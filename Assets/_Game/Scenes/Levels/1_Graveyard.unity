@@ -9009,7 +9009,7 @@ GameObject:
   - component: {fileID: 1317040637}
   - component: {fileID: 1317040636}
   m_Layer: 0
-  m_Name: Pala
+  m_Name: Key_Memory_Shovel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
