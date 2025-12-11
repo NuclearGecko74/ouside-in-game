@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic; // Necesario para usar Listas
 
 public class GlobalGameManager : MonoBehaviour
 {
@@ -9,7 +10,10 @@ public class GlobalGameManager : MonoBehaviour
     public int totalItemsToWin = 5;
     public string winSceneName = "WinScene";
 
-    // Variable privada para que nadie la modifique por error, solo los métodos
+    // --- NUEVO: MEMORIA DE OBJETOS ---
+    // Usamos una lista para recordar QUÉ objetos específicos ya tomamos
+    public List<string> collectedObjectIDs = new List<string>();
+
     private int currentItems = 0;
 
     void Awake()
@@ -25,22 +29,35 @@ public class GlobalGameManager : MonoBehaviour
         }
     }
 
-    public void CollectSecretItem()
+    public void CollectSecretItem(string itemID)
     {
-        currentItems++;
-        Debug.Log($"Objetos: {currentItems} / {totalItemsToWin}");
-
-        if (currentItems >= totalItemsToWin)
+        // 1. Guardamos el ID en la lista para que no vuelva a aparecer
+        if (!collectedObjectIDs.Contains(itemID))
         {
-            WinGame();
+            collectedObjectIDs.Add(itemID);
+
+            // 2. Sumamos al contador numérico
+            currentItems++;
+            Debug.Log($"Objetos: {currentItems} / {totalItemsToWin} (ID: {itemID})");
+
+            if (currentItems >= totalItemsToWin)
+            {
+                WinGame();
+            }
         }
     }
 
-    // --- ESTA ES LA FUNCIÓN CLAVE ---
+    // Método para que el objeto pregunte si ya fue recogido
+    public bool CheckIfCollected(string itemID)
+    {
+        return collectedObjectIDs.Contains(itemID);
+    }
+
     public void ResetProgress()
     {
         currentItems = 0;
-        Debug.Log("El contador de objetos se ha reiniciado a 0.");
+        collectedObjectIDs.Clear(); // <-- Borramos la memoria al reiniciar
+        Debug.Log("Progreso e historial de objetos reiniciado.");
     }
 
     void WinGame()

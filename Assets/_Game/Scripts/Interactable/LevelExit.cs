@@ -15,10 +15,10 @@ public class LevelExit : InteractableObject
     public string unlockedMessage = "Abrir puerta";
 
     [Header("Audio")]
-    [Tooltip("Sonido al intentar abrir si está cerrada (ej. Pomo forzado).")]
-    public AudioClip lockedSound; // <--- NUEVO
-    [Tooltip("Sonido al abrir la puerta y salir (ej. Puerta chirriando).")]
-    public AudioClip openSound;   // <--- NUEVO
+    [Tooltip("Sonido al intentar abrir si está cerrada.")]
+    public AudioClip lockedSound;
+    [Tooltip("Sonido al abrir la puerta y salir.")]
+    public AudioClip openSound;
 
     public new string GetDescription()
     {
@@ -38,7 +38,6 @@ public class LevelExit : InteractableObject
         {
             Debug.Log(lockedMessage);
 
-            // Reproducir sonido de "Bloqueado"
             if (lockedSound != null)
             {
                 AudioSource.PlayClipAtPoint(lockedSound, transform.position);
@@ -48,17 +47,21 @@ public class LevelExit : InteractableObject
 
         // CASO 2: Está Desbloqueada (Salimos)
 
-        // Reproducir sonido de "Abrir"
         if (openSound != null)
         {
             AudioSource.PlayClipAtPoint(openSound, transform.position);
         }
 
-        // Lógica de progreso
+        // --- CORRECCIÓN DEL ERROR ---
         if (countsTowardsWin && GlobalGameManager.Instance != null)
         {
-            GlobalGameManager.Instance.CollectSecretItem();
+            // Generamos un ID único para esta puerta usando el nombre de la escena y el objeto.
+            // Esto cumple con el requisito de "string itemID" que pide el Manager.
+            string exitID = SceneManager.GetActiveScene().name + "_Exit_" + gameObject.name;
+
+            GlobalGameManager.Instance.CollectSecretItem(exitID);
         }
+        // -----------------------------
 
         // Cargar Escena
         CargarEscena();
